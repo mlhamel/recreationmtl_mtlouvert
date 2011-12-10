@@ -1,0 +1,64 @@
+[
+    {
+        "horaire": [
+            {
+                "Dimanche et lundi": "Fermé", 
+                "Jeudi et vendredi": "15 h 30 à 16 h 10", 
+                "Mardi et mercredi": "15 h 30 à 16 h 1019 h 30 à 20 h 10", 
+                "Samedi": "10 h à 10 h 4514 h à 15 h 30", 
+                "age": "Pour tous"
+            }
+        ], 
+        "name": "Piscine Quintal"
+    }, 
+    {
+        "horaire": [
+            {
+                "Lundi au vendredi": "14 h 30 à 16 h 25", 
+                "Lundi, mercredi, vendredi": "19 h à 20 h", 
+                "Samedi": "13 h à 14 h 15", 
+                "age": "Pour tous"
+            }
+        ], 
+        "name": "2663, rue Ontario EstTéléphone : 514 521-6884"
+    }, 
+    {
+        "horaire": [
+            {
+                "Mardi au vendredi": "19 h à 20 h", 
+                "Samedi": "9 h à 11 h", 
+                "age": "Pour tous"
+            }
+        ], 
+        "name": "Piscine du Cégep du Vieux Montréal"
+    }, 
+    {
+        "horaire": [
+            {
+                "Samedi et dimanche": "13 h 30 à 15 h 5517 h à 18 h 55", 
+                "Vendredi": "10 h à 11 h 5513 h à 14 h 55", 
+                "age": "Pour tous"
+            }, 
+            {
+                "Lundi au vendredi": "12 h 12 h 55", 
+                "Lundi, mardi, jeudi et vendredi": "7 h à 8 h 55", 
+                "Lundi, mercredi et vendredi": "20 h 21 h 25", 
+                "Mercredi": "7 h à 8 h 25", 
+                "Mercredi et jeudi": "20 h 30 à 21 h 25", 
+                "Samedi et dimanche": "12 h à 12 h 55", 
+                "age": "Adultes"
+            }
+        ], 
+        "name": "Piscine \r\nde l'Association sportive et communautaire du Centre-Sud"
+    }, 
+    {
+        "horaire": [
+            {
+                "Lundi au vendredi": "14 h 30 à 16 h", 
+                "Samedi et dimanche": "13 h à 14 h", 
+                "age": "Pour tous"
+            }
+        ], 
+        "name": "Piscine du Y Centre-ville"
+    }
+]
