@@ -25,37 +25,43 @@ def parse(elements):
         pool["name"] = name
 
         horaire = pool["horaire"] = []
-        categorie = ""
+        categorie = {}
 
 
         for row in e.find("tbody").cssselect("tr"):
-            cols = ["age", "jour", "heure"]
-
             td = row.cssselect("td")
-            if len(td) == 1:
-                if categorie:
-                    horaire.append(categorie)
 
+            if len(td) == 1:
                 age = td[0].text_content().strip()
 
+                print age
+                if categorie:
+                    horaire.append(categorie)
                 categorie = {"age": age}
+
             elif len(td) == 2:
                 jour = td[0].text_content().strip()
                 #TODO separer les plage horraies quand il y en a plus qu'une
                 heure = td[1].text_content().strip()
                 #heure = lxml.html.tostring(td[1].find('p')).replace('<br>', ',')
                 categorie[jour] = heure
-            elif len(td) == 3:
-                if categorie:
-                    horaire.append(categorie)
 
+            elif len(td) == 3:
                 age = td[0].text_content().strip()
                 jour =  td[1].text_content().strip()
                 heure = td[2].text_content().strip()
+
+                if categorie:
+                    horaire.append(categorie)
+
                 categorie = {
                             "age": age,
                             jour: heure
                         }
+
+        if categorie:
+            horaire.append(categorie)
+
     return pools
 
 
