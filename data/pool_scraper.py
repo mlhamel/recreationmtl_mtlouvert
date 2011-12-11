@@ -71,16 +71,23 @@ def parse(elements):
             elif len(td) == 3:
                 age = td[0].text_content().strip()
                 jour =  td[1].text_content().strip()
-                heure = td[2].text_content().replace('\r\n', '').strip()
+                heure = td[2]
 
+                if heure.find('p') is not None:
+                    heure = lxml.html.tostring(heure.find('p'))
+                    heure = heure.replace('<br>', ', ')
+                    heure = heure.replace('\r\n', '')
+                    heure = strip_tags(heure)
+                else:
+                    heure = lxml.html.tostring(heure)
+                    heure = heure.replace('<br>', ', ')
+                    heure = heure.replace('\r\n', '')
+                    heure = strip_tags(heure)
 
                 if categorie:
                     horaire.append(categorie)
 
-                categorie = {
-                            "age": age,
-                            jour: heure
-                        }
+                categorie = { "age": age, jour: heure }
 
         if categorie:
             horaire.append(categorie)
