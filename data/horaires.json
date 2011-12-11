@@ -10,11 +10,11 @@
             }, 
             {
                 "Dimanche et lundi": "Fermé", 
-                "Jeudi": "11 h à 13 h - 3 couloirs16 h 10 à 17 h - * Partie profonde17 h \r\n      à 17 h 30 - 2 couloirs", 
-                "Mardi": "14 h à 15 h 30 - 2 couloirs16 h 10 à 17 h - * Partie profonde17 \r\n      h à 18 h - * 1 couloir18 h à 18 h 30 - 2 couloirs20 h 10 à 21 h 30 \r\n      - 2 couloirs", 
-                "Mercredi": "14 h à 15 h 30 - 2 couloirs16 h 10 à 17 h - * Partie profonde17 \r\n      h à 18 h - * 1 couloir18 h à 18 h 30 - 2 couloirs20 h 10 à 21 h 30 \r\n      - 2 couloirs", 
-                "Samedi": "10 h 45 à 11 h 30 - 2 couloirs13 h à 14 h - * 1 couloir15 h 30 \r\n      à 16 h 30 - 2 couloirs", 
-                "Vendredi": "10 h à 11 h 30 - 2 couloirs14 h à 15 h 30 - 2 couloirs16 h 10 à \r\n      16 h 30 - 2 couloirs16 h 30 à 17 h 30 - * 1 couloir", 
+                "Jeudi": "11 h à 13 h - 3 couloirs16 h 10 à 17 h - * Partie profonde17 h       à 17 h 30 - 2 couloirs", 
+                "Mardi": "14 h à 15 h 30 - 2 couloirs16 h 10 à 17 h - * Partie profonde17       h à 18 h - * 1 couloir18 h à 18 h 30 - 2 couloirs20 h 10 à 21 h 30       - 2 couloirs", 
+                "Mercredi": "14 h à 15 h 30 - 2 couloirs16 h 10 à 17 h - * Partie profonde17       h à 18 h - * 1 couloir18 h à 18 h 30 - 2 couloirs20 h 10 à 21 h 30       - 2 couloirs", 
+                "Samedi": "10 h 45 à 11 h 30 - 2 couloirs13 h à 14 h - * 1 couloir15 h 30       à 16 h 30 - 2 couloirs", 
+                "Vendredi": "10 h à 11 h 30 - 2 couloirs14 h à 15 h 30 - 2 couloirs16 h 10 à       16 h 30 - 2 couloirs16 h 30 à 17 h 30 - * 1 couloir", 
                 "age": "Adultes"
             }
         ], 
@@ -73,7 +73,7 @@
                 "age": "Jeunesses 14 - 17 ans"
             }
         ], 
-        "name": "Piscine \r\nde l'Association sportive et communautaire du Centre-Sud"
+        "name": "Piscine de l'Association sportive et communautaire du Centre-Sud"
     }, 
     {
         "horaire": [

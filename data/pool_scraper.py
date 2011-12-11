@@ -21,6 +21,7 @@ def parse(elements):
         #name = header.text_content()
 
         name = e.getprevious().getprevious().getprevious().text_content()
+        name = name.replace('\r\n', '')
 
         pool["name"] = name
 
@@ -42,14 +43,15 @@ def parse(elements):
             elif len(td) == 2:
                 jour = td[0].text_content().strip()
                 #TODO separer les plage horraies quand il y en a plus qu'une
-                heure = td[1].text_content().strip()
+                heure = td[1].text_content().replace('\r\n', '').strip()
                 #heure = lxml.html.tostring(td[1].find('p')).replace('<br>', ',')
                 categorie[jour] = heure
 
             elif len(td) == 3:
                 age = td[0].text_content().strip()
                 jour =  td[1].text_content().strip()
-                heure = td[2].text_content().strip()
+                heure = td[2].text_content().replace('\r\n', '').strip()
+
 
                 if categorie:
                     horaire.append(categorie)
