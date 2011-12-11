@@ -2,8 +2,14 @@ import urllib
 import lxml.html
 from lxml.html import fromstring
 import json
+import re
 
 URL = "http://ville.montreal.qc.ca/portal/page?_pageid=7317,78925591&_dad=portal&_schema=PORTAL"
+
+def strip_tags(input):
+    exp = re.compile(r'<.*?>')
+    return exp.sub('', input)
+
 
 def parse(elements):
     pools = []
@@ -35,15 +41,26 @@ def parse(elements):
             if len(td) == 1:
                 age = td[0].text_content().strip()
 
-                print age
                 if categorie:
                     horaire.append(categorie)
                 categorie = {"age": age}
 
             elif len(td) == 2:
                 jour = td[0].text_content().strip()
-                #TODO separer les plage horraies quand il y en a plus qu'une
-                heure = td[1].text_content().replace('\r\n', '').strip()
+                heure = td[1]
+                if heure.find('p') is not None:
+                    heure = lxml.html.tostring(heure.find('p'))
+                    heure = heure.replace('<br>', ', ')
+                    heure = heure.replace('\r\n', '')
+                    heure = strip_tags(heure)
+                    print heure
+                else:
+                    heure = lxml.html.tostring(heure)
+                    heure = heure.replace('<br>', ', ')
+                    heure = heure.replace('\r\n', '')
+                    heure = strip_tags(heure)
+                    print heure
+
                 #heure = lxml.html.tostring(td[1].find('p')).replace('<br>', ',')
                 categorie[jour] = heure
 
