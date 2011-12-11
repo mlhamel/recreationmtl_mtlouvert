@@ -8,8 +8,13 @@ import HTMLParser
 URL = "http://ville.montreal.qc.ca/portal/page?_pageid=7317,78925591&_dad=portal&_schema=PORTAL"
 
 def strip_tags(input):
+    # unescape html entities
     html_parser = HTMLParser.HTMLParser()
     input = html_parser.unescape(input)
+    # strip consecutive white spaces
+    exp = re.compile(r'\s+')
+    input = exp.sub(' ', input)
+    # strip tags
     exp = re.compile(r'<.*?>')
     return exp.sub('', input)
 
