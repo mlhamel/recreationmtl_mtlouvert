@@ -20,16 +20,14 @@ def parse(elements):
         pool = {}
         pools.append(pool)
 
-        #i = 0
-        #header = e
-        #while i <= 3:
-            #header = header.getprevious()
-            #print header.tag
-            #if header.tag != "p":
-                #i += 1
-        #name = header.text_content()
+        i = 0
+        header = e
+        while i <= 2:
+            header = header.getprevious()
+            if header.text_content() != '':
+                i += 1
 
-        name = e.getprevious().getprevious().getprevious().text_content()
+        name = header.text_content()
         name = name.replace('\r\n', '')
 
         pool["name"] = name
@@ -51,20 +49,18 @@ def parse(elements):
             elif len(td) == 2:
                 jour = td[0].text_content().strip()
                 heure = td[1]
+
                 if heure.find('p') is not None:
                     heure = lxml.html.tostring(heure.find('p'))
                     heure = heure.replace('<br>', ', ')
                     heure = heure.replace('\r\n', '')
                     heure = strip_tags(heure)
-                    print heure
                 else:
                     heure = lxml.html.tostring(heure)
                     heure = heure.replace('<br>', ', ')
                     heure = heure.replace('\r\n', '')
                     heure = strip_tags(heure)
-                    print heure
 
-                #heure = lxml.html.tostring(td[1].find('p')).replace('<br>', ',')
                 categorie[jour] = heure
 
             elif len(td) == 3:
@@ -91,7 +87,6 @@ def main():
     page = urllib.urlopen(URL)
     doc = fromstring(page.read())
     pools = parse(doc.cssselect(".tabDonnees"))
-    #print pools
     with open('horaires.json', 'w') as out:
         out.write(json.dumps(pools, indent=4, sort_keys=True, ensure_ascii=False).encode('utf-8'))
 
