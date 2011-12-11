@@ -2,19 +2,19 @@
     {
         "horaire": [
             {
-                "Dimanche et lundi": "Ferm&#233;", 
-                "Jeudi et vendredi": "15 h 30 &#224; 16 h 10", 
-                "Mardi et mercredi": "15 h 30 &#224; 16 h 10, 19 h 30 &#224; 20 h 10", 
-                "Samedi": "10 h &#224; 10 h 45, 14 h &#224; 15 h 30", 
+                "Dimanche et lundi": "Fermé", 
+                "Jeudi et vendredi": "15 h 30 à 16 h 10", 
+                "Mardi et mercredi": "15 h 30 à 16 h 10, 19 h 30 à 20 h 10", 
+                "Samedi": "10 h à 10 h 45, 14 h à 15 h 30", 
                 "age": "Pour tous"
             }, 
             {
-                "Dimanche et lundi": "Ferm&#233;", 
-                "Jeudi": "11 h &#224; 13 h - 3 couloirs, 16 h 10 &#224; 17 h - * Partie profonde, 17 h       &#224; 17 h 30 - 2 couloirs", 
+                "Dimanche et lundi": "Fermé", 
+                "Jeudi": "11 h à 13 h - 3 couloirs, 16 h 10 à 17 h - * Partie profonde, 17 h       à 17 h 30 - 2 couloirs", 
                 "Mardi": "14 h à 15 h 30 - 2 couloirs16 h 10 à 17 h - * Partie profonde17       h à 18 h - * 1 couloir18 h à 18 h 30 - 2 couloirs20 h 10 à 21 h 30       - 2 couloirs", 
-                "Mercredi": "14 h &#224; 15 h 30 - 2 couloirs, 16 h 10 &#224; 17 h - * Partie profonde, 17       h &#224; 18 h - * 1 couloir, 18 h &#224; 18 h 30 - 2 couloirs, 20 h 10 &#224; 21 h 30       - 2 couloirs", 
-                "Samedi": "10 h 45 &#224; 11 h 30 - 2 couloirs, 13 h &#224; 14 h - * 1 couloir, 15 h 30       &#224; 16 h 30 - 2 couloirs", 
-                "Vendredi": "10 h &#224; 11 h 30 - 2 couloirs, 14 h &#224; 15 h 30 - 2 couloirs, 16 h 10 &#224;       16 h 30 - 2 couloirs, 16 h 30 &#224; 17 h 30 - * 1 couloir", 
+                "Mercredi": "14 h à 15 h 30 - 2 couloirs, 16 h 10 à 17 h - * Partie profonde, 17       h à 18 h - * 1 couloir, 18 h à 18 h 30 - 2 couloirs, 20 h 10 à 21 h 30       - 2 couloirs", 
+                "Samedi": "10 h 45 à 11 h 30 - 2 couloirs, 13 h à 14 h - * 1 couloir, 15 h 30       à 16 h 30 - 2 couloirs", 
+                "Vendredi": "10 h à 11 h 30 - 2 couloirs, 14 h à 15 h 30 - 2 couloirs, 16 h 10 à       16 h 30 - 2 couloirs, 16 h 30 à 17 h 30 - * 1 couloir", 
                 "age": "Adultes"
             }
         ], 
@@ -23,15 +23,15 @@
     {
         "horaire": [
             {
-                "Lundi au vendredi": "14&#160;h 30 &#224; 16 h 25", 
-                "Lundi, mercredi, vendredi": "19 h &#224; 20 h", 
-                "Samedi": "13 h &#224; 14 h 15", 
+                "Lundi au vendredi": "14 h 30 à 16 h 25", 
+                "Lundi, mercredi, vendredi": "19 h à 20 h", 
+                "Samedi": "13 h à 14 h 15", 
                 "age": "Pour tous"
             }, 
             {
                 "Lundi au vendredi": "12 h  à 14 h 25", 
-                "Lundi, mercredi, vendredi": "20 h 05 &#224; 21 h 20", 
-                "Samedi": "14 h 20 &#224; 15 h 45", 
+                "Lundi, mercredi, vendredi": "20 h 05 à 21 h 20", 
+                "Samedi": "14 h 20 à 15 h 45", 
                 "age": "Adultes"
             }
         ], 
@@ -41,12 +41,12 @@
         "horaire": [
             {
                 "Mardi au vendredi": "19 h à 20 h", 
-                "Samedi": "9 h &#224; 11 h", 
+                "Samedi": "9 h à 11 h", 
                 "age": "Pour tous"
             }, 
             {
                 "Mardi au vendredi": "17 h 30 à 21 h 15", 
-                "Samedi": "9 h &#224; 12 h", 
+                "Samedi": "9 h à 12 h", 
                 "age": "Adultes"
             }
         ], 
@@ -55,17 +55,17 @@
     {
         "horaire": [
             {
-                "Samedi et dimanche": "13 h 30 &#224; 15 h 55, 17 h &#224; 18 h 55", 
-                "Vendredi": "10 h &#224; 11 h 55, 13 h &#224; 14 h 55", 
+                "Samedi et dimanche": "13 h 30 à 15 h 55, 17 h à 18 h 55", 
+                "Vendredi": "10 h à 11 h 55, 13 h à 14 h 55", 
                 "age": "Pour tous"
             }, 
             {
                 "Lundi au vendredi": "12 h 12 h 55", 
                 "Lundi, mardi, jeudi et vendredi": "7 h à 8 h 55", 
                 "Lundi, mercredi et vendredi": "20 h 21 h 25", 
-                "Mercredi": "7 h &#224; 8 h 25", 
-                "Mercredi et jeudi": "20 h 30 &#224; 21 h 25", 
-                "Samedi et dimanche": "12 h &#224; 12 h 55", 
+                "Mercredi": "7 h à 8 h 25", 
+                "Mercredi et jeudi": "20 h 30 à 21 h 25", 
+                "Samedi et dimanche": "12 h à 12 h 55", 
                 "age": "Adultes"
             }, 
             {
@@ -79,12 +79,12 @@
         "horaire": [
             {
                 "Lundi au vendredi": "14 h 30 à 16 h", 
-                "Samedi et dimanche": "13 h &#224; 14 h", 
+                "Samedi et dimanche": "13 h à 14 h", 
                 "age": "Pour tous"
             }, 
             {
                 "Lundi au vendredi": "20 h 30 à 22 h", 
-                "Samedi et dimanche": "17 h &#224; 19 h", 
+                "Samedi et dimanche": "17 h à 19 h", 
                 "age": "Adultes"
             }
         ], 

@@ -3,10 +3,13 @@ import lxml.html
 from lxml.html import fromstring
 import json
 import re
+import HTMLParser
 
 URL = "http://ville.montreal.qc.ca/portal/page?_pageid=7317,78925591&_dad=portal&_schema=PORTAL"
 
 def strip_tags(input):
+    html_parser = HTMLParser.HTMLParser()
+    input = html_parser.unescape(input)
     exp = re.compile(r'<.*?>')
     return exp.sub('', input)
 
