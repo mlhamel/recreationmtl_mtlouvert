@@ -2,15 +2,13 @@
 # -*- coding: UTF-8 -*-
 
 """
-IMPORTANT : this is NOT completed, so it will likely not run.
-
-TODO:
-
-- use update instead of insert when pool_id already exists
-
 author: Jolan Sergerie-Jeannotte
 
 Creation date : 10 December 2011
+
+**TODO**:
+
+  * Find a way to send unicode data
 
 """
 
@@ -41,18 +39,20 @@ def connect_ft(username, password):
 # -------------------------
 
 class GestionPoolFusionTable():
+    """
+    Fileds in the table:
+
+    * pool_id: a unique id for the pool
+    * pool_name: the name of the pool
+    * pool_address: the adress of the pool
+    * schedule_text: a string representation of the schedule
+    * update_date: the date we added or updated the pool
+    """
+
     def __init__(self, ft_client):
         self.ft_client = ft_client
 
-        #Table id and names of the columns in the FT of pools hours :
-        self.hoursTableId = 2392546
-        self.hoursId = "pool_id"
-        self.hoursName = "pool_name"
-        self.hoursAddresse = "pool_address"
-        self.hoursSchedule = "schedule_text"
-        self.hoursUpdateDate = "update_date"
-
-    def addPoolHours(self, tableId, name, hours):
+    def addPoolHours(self, tableId, name, address, hours):
         """
         Add a pool and schedule to the table
 
@@ -63,12 +63,14 @@ class GestionPoolFusionTable():
         # hours is simply a String.
         poolId, should_update = self.getPoolId(tableId, name)
         now = datetime.datetime.now()
-        date = now.strftime("%Y-%m-%d")
+        date = now.strftime("%Y-%m-%d %H:%M")
 
         data = {
                     'pool_id': poolId,
                     'pool_name': name,
-                    'schedule_text': hours
+                    'pool_address': address,
+                    'schedule_text': hours,
+                    'update_date': date
                }
 
         if should_update:
@@ -152,19 +154,32 @@ class GestionPoolFusionTable():
 # -------------------------
 
 if __name__ == "__main__":
+    """
+    Usage:
+
+        $ python pool_ft_sql_client.py [username]
+    """
 
     import getpass
+    import sys
+
     #Nom d'usager Google (exemple : cpu.gastronomy@gmail.com)
-    username = raw_input('user name: ') or "ph.mongeau@gmail.com"
+    if len(sys.argv) >= 2:
+        username = sys.argv[1]
+    else:
+        username = raw_input('user name: ')
     #Mot de passe du compte
     password = getpass.getpass("Enter your password: ")
     connection = connect_ft(username, password)
 
     gestion = GestionPoolFusionTable(connection)
 
-    gestion.addPoolHours(2444117,
+    tableId = 2392546
+    gestion.addPoolHours(tableId,
                          "Piscine du Complexe sportif Claude-Robillard",
+                         "1000 avenue Emile-Journault",
                          "jeudi-vendredi: 10h00 a 20h00")
-    gestion.addPoolHours(2444117,
+    gestion.addPoolHours(tableId,
                          "Une autre piscine",
+                         "1234 rue Fictive",
                          "jeudi-vendredi: 11h00 a 22h00")
