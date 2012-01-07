@@ -6,10 +6,6 @@ author: Jolan Sergerie-Jeannotte
 
 Creation date : 10 December 2011
 
-**TODO**:
-
-  * Find a way to send unicode data
-
 """
 
 
@@ -66,11 +62,11 @@ class GestionPoolFusionTable():
         date = now.strftime("%Y-%m-%d %H:%M")
 
         data = {
-                    'pool_id': poolId,
-                    'pool_name': name,
-                    'pool_address': address,
-                    'schedule_text': hours,
-                    'update_date': date
+                    u'pool_id': poolId,
+                    u'pool_name': name,
+                    u'pool_address': address,
+                    u'schedule_text': hours,
+                    u'update_date': date
                }
 
         if should_update:
@@ -91,8 +87,8 @@ class GestionPoolFusionTable():
         """
 
         # Try to get the id of the pool from the given name
-        sql = SQL().select(tableId, ["pool_id"],
-                           "pool_name = '{}'".format(name))
+        sql = SQL().select(tableId, [u"pool_id"],
+                           u"pool_name = '{}'".format(name))
         print sql
         result = self.ft_client.query(sql).split('\n')[1]
 
@@ -183,3 +179,7 @@ if __name__ == "__main__":
                          "Une autre piscine",
                          "1234 rue Fictive",
                          "jeudi-vendredi: 11h00 a 22h00")
+    gestion.addPoolHours(tableId,
+                         u"Pisincine Unicodé",
+                         u"1234 rue ÉaàuÙ",
+                         u"jeudi-vendredi: 11h00 a 22h00")
