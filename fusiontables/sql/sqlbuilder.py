@@ -175,13 +175,13 @@ class SQL:
       elif type(value).__name__=='float':
         stringValues = '%s%f' % (stringValues, value)
       else:
-        stringValues = "%s'%s'" % (stringValues,
-                                   value.encode('string-escape'))
+        stringValues = "%s'%s'" % (stringValues, value.replace("'", "\\'"))
       if count < len(values): stringValues = "%s," % (stringValues)
       count += 1
 
-    return 'INSERT INTO %d (%s) VALUES (%s)' % \
+    str = 'INSERT INTO %d (%s) VALUES (%s)' % \
       (int(table_id), ','.join(["'%s'" % col for col in cols]), stringValues)
+    return str
 
   def dropTable(self, table_id):
     """ Build DROP TABLE sql statement.
