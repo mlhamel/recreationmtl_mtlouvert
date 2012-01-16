@@ -49,7 +49,7 @@ if __name__ == '__main__':
             #file.write(l.encode("utf8"));
             #file.write("\n")
 
-    with open("ski_coords.json", "w") as file:
+    with open("../ski/ski_coords.json", "w") as file:
         out =  json.dumps(locations, indent=4, sort_keys=True, ensure_ascii=False)
         file.write(out.encode("utf8"))
 
